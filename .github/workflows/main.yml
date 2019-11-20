@@ -19,9 +19,15 @@ jobs:
     - name: Generate Antora Site
       uses: jsqu4re/antora_build@0.1.1
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@2.0.3
+      uses: crazy-max/ghaction-github-pages@v1.2.4
+      with:
+        repo: yocurt/docs
+        target_branch: gh-pages
+        keep_history: true
+        allow_empty_commit: true
+        build_dir: build/site
+        committer_name: "Update Pages"
+        committer_email: update@github.pages
+        commit_message: "update gh pages"
       env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_BRANCH: master
-        BRANCH: gh-pages
-        FOLDER: build/site
+        GITHUB_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
