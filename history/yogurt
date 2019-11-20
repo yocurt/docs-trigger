@@ -1,8 +1,6 @@
-commit 5d1240781c00e17ffd6b2a1dcc7918dfaa83d2ae
+commit aa7271333ead94073086d76492bd0c7f30240283
 Author: Johannes Jeising <Johannes.Jeising@gmail.com>
-Date:   Wed Nov 20 13:44:16 2019 +0100
+Date:   Wed Nov 20 14:07:33 2019 +0100
 
-    update docs and add doc-trigger integration
+    Update index doc
 
- create mode 100644 .github/workflows/docs.yml
- rename docs/modules/ROOT/pages/{markdown.md => markdown.adoc} (61%)
