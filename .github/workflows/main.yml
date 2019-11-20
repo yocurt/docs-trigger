@@ -14,7 +14,8 @@ jobs:
         ref: master
     - name: Copy to workspace
       run: |
-        mv $GITHUB_WORKSPACE/docs $GITHUB_WORKSPACE
+        rm -rf $GITHUB_WORKSPACE
+        mv $GITHUB_WORKSPACE/../docs $GITHUB_WORKSPACE
     - name: Generate Antora Site
       uses: jsqu4re/antora_build@0.1.1
     - name: Deploy to GitHub Pages
