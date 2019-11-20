@@ -4,3 +4,23 @@ Date:   Wed Nov 20 13:35:22 2019 +0100
 
     try to fix workflow
 
+---
+commit 4f13c9985f0284b07633048f48e5c1e945652690
+Author: pow(J,2) <35706792+jsqu4re@users.noreply.github.com>
+Date:   Wed Nov 20 15:35:52 2019 +0100
+
+    Create yaml_cli.adoc
+
+diff --git a/docs/modules/yogurt-yaml/pages/yaml_cli.adoc b/docs/modules/yogurt-yaml/pages/yaml_cli.adoc
+new file mode 100644
+index 0000000..f962e1b
+--- /dev/null
++++ b/docs/modules/yogurt-yaml/pages/yaml_cli.adoc
+@@ -0,0 +1,7 @@
++= CLI
++
++== CLI API
++
++ID[REQ::CLI]
++
++CLI Interface
