@@ -1,0 +1,24 @@
+name: Publish Antora Site
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        repository: yocurt/docs
+        ref: master
+        token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+    - name: Generate Antora Site
+      uses: jsqu4re/antora_build@0.1.1
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@2.0.3
+      env:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN_PAGES }}
+        BASE_BRANCH: master
+        BRANCH: gh-pages
+        FOLDER: build/site
